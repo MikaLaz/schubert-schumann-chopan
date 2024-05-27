@@ -1,0 +1,316 @@
+
+:root {
+  box-sizing: border-box;
+  --text-accent: #B0907A;
+  --background-body: #69532D;
+  --background-table1: #637CA2;
+  --background-table2: #CFD5EA;  
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  /* border: 1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: 'Good Vibes Pro';
+	src: url('GoodVibesPro.eot');
+	src: local('Good Vibes Pro'), local('GoodVibesPro'),
+		url('./assets/fonts/GoodVibesPro.eot?#iefix') format('embedded-opentype'),
+		url('./assets/fonts/GoodVibesPro.woff') format('woff'),
+		url('./assets/fonts/GoodVibesPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ibarra Real Nova';
+  src: url('IbarraRealNova-Regular.eot');
+  src: local('Ibarra Real Nova Regular'), local('IbarraRealNova-Regular'),
+      url('./assets/fonts/IbarraRealNova-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/IbarraRealNova-Regular.woff2') format('woff2'),
+      url('./assets/fonts/IbarraRealNova-Regular.woff') format('woff'),
+      url('./assets/fonts/IbarraRealNova-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Ibarra Real Nova', sans-serif;  
+  background-color: var(--background-body);
+  color: white; 
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0 1.25em;  
+ }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+a::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  font-family: 'Ibarra Real Nova', serif ;
+  font-size: 1.2em;
+}
+
+.header-menu {
+  display: flex;
+  margin-top: 1%;
+  margin-bottom: 50px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header-menu-item {
+  font-style: bold;
+}
+
+.header-menu-item:hover,
+.works-list-item:hover,
+.biog-table-header:hover {
+ color: black;
+ transition: 0.7s;
+ text-shadow: gray 1px -1px;
+}
+
+.main {
+  font-family: 'Ibarra Real Nova', serif;
+}
+
+.composers-name {
+  font-family: 'Good Vibes Pro', sans-serif;
+  text-align: center;
+}
+
+.section-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(75%, auto);
+  padding-bottom: 150px;
+  text-align: justify;    
+}
+
+.foto {
+  justify-self:center;
+}
+
+.facts-header,
+.works-list-header {
+  margin-bottom: 20px;
+}
+
+.facts-list-item,
+.works-list-item {
+  list-style-type:circle;
+  margin-bottom: 10px;
+}
+
+.poems-text {
+  font-family: 'Ibarra Real Nova', serif;
+  text-align: center;
+}
+
+.poems-footer,
+.poems-text {
+  text-align: center;
+}
+
+.player {
+  margin-top: -70px;
+}
+
+.poems-quote {
+  padding-bottom: 20px;
+}
+
+.section-header {
+  margin: 0 auto;
+  max-width: 250px;
+  text-align: center;
+  border: 1px solid #4472c4;
+  padding: 10px;
+ margin-bottom: 2%;
+}
+
+.biog-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 5%;   
+}
+
+.biog-table-desc {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.biog-table-desc:nth-child(1) {
+  background-color: #4472c4;
+}
+
+.biog-table-desc:nth-child(2) {
+  background-color: #cfd5ea;
+  color: black;
+}
+
+.biog-table-desc:nth-child(3) {
+  background-color: #e9ebf5;
+  color: black;
+}
+
+.biog-table-header {
+  margin-bottom: 10px;
+}
+
+.biog-years {
+  line-height: 1.5em;
+}
+
+.biog-years-item {
+  justify-items: stretch;
+}
+
+.biog-table-img {
+ justify-self: center;
+}
+
+.biog-description,
+.section-style,
+.styles {
+  text-align: justify;
+}
+
+.biog-early-years,
+.biog-wandering,
+.biog-late,
+.styles-desc {
+  margin-bottom: 5%;
+}
+
+.section-biog-header {
+  margin-bottom: 2%;
+}
+
+.style-desc--wraper {
+  border: 1px solid #4472c4;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.theme-header,
+.style-text ,
+.style-table-header,
+.header-styles-prog {
+  margin-bottom: 20px;
+}
+
+.curiosity {
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+.style-list-item {
+  list-style-type: circle;
+  margin-left: 20px;
+  padding-bottom: 5px;
+}
+
+.section-style-table {
+  margin-top: 20px;
+}
+
+.style-table {
+  border: #4472c4 solid 1px;
+  width: 55%;
+  /* margin: 0 auto; */
+  
+}
+
+.style-table-head th {
+  background-color: #4472c4;
+  padding: 5px;
+  
+}
+
+.style-table td {
+   border: #4472c4 solid 1px;
+   padding: 10px;
+   background-color:#CFD5EA;
+   color: black;
+}
+
+.header-shubert {
+  max-width: 100%;
+}
+
+.table-worsk {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;  
+  margin-top: 2%;
+}
+
+.works-list {
+  margin-right: 2%;
+  align-self:stretch;
+}
+
+.biog-table-img-shuman {
+  width: 100%;
+}
+
+.styles-list-item {
+  list-style-type:lower-latin;
+  margin-left: 20px;
+}
+
+.styles-item-desc {
+  margin-bottom: 10px;
+}
+
+.styles-desc-header {
+  font-weight: 100;
+}
+
+.styles-sublist-item {
+  list-style-type:decimal;
+  margin-left: 20px;
+}
+
+.styles-list {
+  margin-bottom: 20px;
+}
+
+.styles-span {
+  font-size: larger;
+}

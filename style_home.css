@@ -1,0 +1,172 @@
+:root {
+  box-sizing: border-box;
+  --text-accent: #B0907A;
+  --background-body: #69532D;
+  --background-table1: #637CA2;
+  --background-table2: #CFD5EA;  
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  /* border: 1px solid red; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: 'Good Vibes Pro';
+	src: url('GoodVibesPro.eot');
+	src: local('Good Vibes Pro'), local('GoodVibesPro'),
+		url('./assets/fonts/GoodVibesPro.eot?#iefix') format('embedded-opentype'),
+		url('./assets/fonts/GoodVibesPro.woff') format('woff'),
+		url('./assets/fonts/GoodVibesPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'RotondaC';
+	src: url('RotondaC.eot');
+	src: local('RotondaC'),
+		url('./assets/fonts/RotondaC.eot?#iefix') format('embedded-opentype'),
+		url('./assets/fonts/RotondaC.woff') format('woff'),
+		url('./assets/fonts/RotondaC.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Good Vibes Pro', sans-serif;  
+  background-color: var(--background-body);
+  color: white; 
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0 auto;
+  padding: 0 1.25em;  
+ }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+a::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+li {
+  list-style-type: none;
+}
+
+.composers {
+  flex: 1 0 auto;
+  margin-top: 10%;  
+}
+
+.composers-list {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);   */
+  width: 100%;
+  display: flex;  
+  justify-content: center; 
+  gap: 30px;
+}
+
+.composers_list_item {
+  width: 30%;
+}
+
+.composers-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: 0.8s; 
+}
+
+.composers-link:hover {
+  color: black;  
+}
+
+.composers-img {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 50%;
+  max-height: 100%;
+  box-shadow: 0 0 25px 5px rgba(247, 245, 245, 0.8);
+}
+
+.img {
+  display: block;
+  transition: 0.7s;
+  /* width: 90%; */
+  height: 400px;
+  background-size:cover;  
+ 
+}
+.composers-img:hover {
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.747);
+}
+
+.composers-img .img:hover {
+  transform: scale(1.1);
+  
+}
+
+.composers-name {
+  font-size: 32px;
+  letter-spacing: 5px;
+}
+
+.first-letter {
+  font-weight: 700;
+}
+
+.footer { 
+  flex: 0 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'RotondaC', sans-serif; 
+  font-size: 1em;    
+}
+
+.footer-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  align-items: baseline;
+  
+}
+
+.footer-link:hover {
+ color: black;
+ transition: 0.7s ease;
+}
+
+.footer-autor {
+  font-family: 'Good Vibes Pro', sans-serif;
+  font-size: 2em;
+}
+
+.list-tranparent {
+  display: none;
+}
